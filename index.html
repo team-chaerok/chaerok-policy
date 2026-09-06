@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex" />
+<title>채록(Chaerok) 정책 센터</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --surface: #fafafa;
+    --text: #1a1a1a;
+    --muted: #6b7280;
+    --border: #e5e7eb;
+    --link: #2563eb;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #17181a;
+      --surface: #1f2023;
+      --text: #e8e8ea;
+      --muted: #9ca3af;
+      --border: #333438;
+      --link: #7ab0ff;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    padding: 48px 20px 80px;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+      "Pretendard", "Noto Sans KR", "Malgun Gothic", sans-serif;
+    line-height: 1.7;
+    font-size: 16px;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  header { margin-bottom: 40px; }
+  h1 { font-size: 24px; font-weight: 700; margin: 0 0 8px; letter-spacing: -0.01em; }
+  .lead { color: var(--muted); margin: 0; font-size: 15px; }
+  .cards { display: flex; flex-direction: column; gap: 12px; margin: 32px 0; }
+  a.card {
+    display: block;
+    padding: 20px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--surface);
+    text-decoration: none;
+    color: inherit;
+    transition: border-color .15s ease;
+  }
+  a.card:hover { border-color: var(--link); }
+  a.card .t { font-weight: 600; font-size: 16px; margin-bottom: 4px; }
+  a.card .d { color: var(--muted); font-size: 14px; }
+  footer {
+    margin-top: 48px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 13px;
+  }
+  footer p { margin: 4px 0; }
+  footer a { color: var(--link); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>채록(Chaerok) 정책 센터</h1>
+    <p class="lead">채록 서비스의 개인정보 처리 방침과 회원 탈퇴 절차를 안내합니다.</p>
+  </header>
+
+  <nav class="cards">
+    <a class="card" href="privacy/">
+      <div class="t">개인정보처리방침</div>
+      <div class="d">채록이 수집하는 개인정보 항목, 이용 목적, 보관 기간, 이용자의 권리</div>
+    </a>
+    <a class="card" href="delete-account/">
+      <div class="t">회원 탈퇴 및 데이터 삭제 안내</div>
+      <div class="d">계정과 업로드한 사진 등 데이터를 삭제하는 방법과 처리 절차</div>
+    </a>
+  </nav>
+
+  <footer>
+    <p>운영주체: team-chaerok</p>
+    <p>문의: <a href="mailto:chaerok.lpj@gmail.com">chaerok.lpj@gmail.com</a></p>
+    <p>최종 업데이트: 2026년 9월 6일</p>
+  </footer>
+</div>
+</body>
+</html>
