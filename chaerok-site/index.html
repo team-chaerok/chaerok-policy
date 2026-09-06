@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>채록(Chaerok) — 걸으며 기록하는 코스 사진 일기</title>
+<meta name="description" content="채록은 코스를 따라 걸으며 지점마다 사진을 남기고, GPS로 방문을 인증해 나만의 필름롤을 완성하는 사진 일기 앱입니다." />
+<style>
+  :root {
+    --bg: #ffffff;
+    --surface: #fafafa;
+    --text: #1a1a1a;
+    --muted: #6b7280;
+    --border: #e5e7eb;
+    --link: #2563eb;
+    --accent: #1a1a1a;
+    --accent-text: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #17181a;
+      --surface: #1f2023;
+      --text: #e8e8ea;
+      --muted: #9ca3af;
+      --border: #333438;
+      --link: #7ab0ff;
+      --accent: #e8e8ea;
+      --accent-text: #17181a;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+      "Pretendard", "Noto Sans KR", "Malgun Gothic", sans-serif;
+    line-height: 1.7;
+    font-size: 16px;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+
+  /* Hero */
+  .hero { text-align: center; padding: 88px 0 64px; }
+  .mark {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    color: var(--muted);
+    margin-bottom: 24px;
+  }
+  h1 {
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin: 0 0 16px;
+    line-height: 1.35;
+  }
+  .sub {
+    color: var(--muted);
+    font-size: 16px;
+    margin: 0 auto 32px;
+    max-width: 460px;
+  }
+  .cta { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+  .btn {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 18px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--surface);
+    color: var(--muted);
+    font-size: 14px;
+    cursor: default;
+  }
+  .btn .store { font-weight: 600; color: var(--text); }
+  .btn .state { font-size: 12px; }
+
+  /* Sections */
+  section { padding: 48px 0; border-top: 1px solid var(--border); }
+  h2 {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin: 0 0 24px;
+    text-align: center;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  @media (max-width: 560px) { .grid { grid-template-columns: 1fr; } }
+  .feat {
+    padding: 20px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--surface);
+  }
+  .feat .ft { font-weight: 600; margin-bottom: 6px; }
+  .feat .fd { color: var(--muted); font-size: 14px; }
+
+  ol.steps {
+    counter-reset: step;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-width: 480px;
+    margin-inline: auto;
+  }
+  ol.steps li {
+    counter-increment: step;
+    position: relative;
+    padding: 14px 0 14px 44px;
+    border-bottom: 1px solid var(--border);
+  }
+  ol.steps li:last-child { border-bottom: 0; }
+  ol.steps li::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 12px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: var(--accent-text);
+    font-size: 14px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  ol.steps .st { font-weight: 600; }
+  ol.steps .sd { color: var(--muted); font-size: 14px; }
+
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 32px 0 56px;
+    color: var(--muted);
+    font-size: 13px;
+    text-align: center;
+  }
+  footer a { color: var(--link); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+  footer .row { margin: 6px 0; }
+  footer .sep { margin: 0 8px; opacity: 0.5; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="mark">CHAEROK</div>
+    <h1>걸으며 기록하는<br />코스 사진 일기</h1>
+    <p class="sub">
+      코스를 따라 걸으며 지점마다 사진을 남기고, GPS로 방문을 인증해
+      나만의 필름롤을 완성하세요.
+    </p>
+    <div class="cta">
+      <span class="btn"><span class="store">Google Play</span><span class="state">출시 준비 중</span></span>
+      <span class="btn"><span class="store">App Store</span><span class="state">출시 준비 중</span></span>
+    </div>
+  </header>
+
+  <section>
+    <h2>이런 앱이에요</h2>
+    <div class="grid">
+      <div class="feat">
+        <div class="ft">코스를 따라 걷기</div>
+        <div class="fd">산책·여행 코스를 따라 이동하며 하루를 채웁니다.</div>
+      </div>
+      <div class="feat">
+        <div class="ft">지점마다 사진 한 컷</div>
+        <div class="fd">필름롤에 담듯, 코스 위의 순간들을 사진으로 남깁니다.</div>
+      </div>
+      <div class="feat">
+        <div class="ft">GPS 방문 인증</div>
+        <div class="fd">실제로 다녀온 곳만 기록에 남아 신뢰할 수 있습니다.</div>
+      </div>
+      <div class="feat">
+        <div class="ft">나만의 필름롤 완성</div>
+        <div class="fd">걸어온 길이 한 편의 사진 일기로 이어집니다.</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>이렇게 써요</h2>
+    <ol class="steps">
+      <li>
+        <div class="st">코스 선택</div>
+        <div class="sd">걷고 싶은 코스를 고르고 필름롤을 시작합니다.</div>
+      </li>
+      <li>
+        <div class="st">지점에서 촬영·인증</div>
+        <div class="sd">코스 위 지점에 도착해 사진을 찍으면 위치로 방문이 인증됩니다.</div>
+      </li>
+      <li>
+        <div class="st">필름롤 확인</div>
+        <div class="sd">완성된 필름롤에서 그날의 코스와 사진을 다시 봅니다.</div>
+      </li>
+    </ol>
+  </section>
+
+</div>
+
+<footer>
+  <div class="row">team-chaerok</div>
+  <div class="row"><a href="mailto:chaerok.lpj@gmail.com">chaerok.lpj@gmail.com</a></div>
+  <div class="row">
+    <a href="#">개인정보처리방침</a>
+    <span class="sep">·</span>
+    <a href="#">회원 탈퇴 안내</a>
+  </div>
+  <div class="row">© 2026 team-chaerok</div>
+</footer>
+</body>
+</html>
